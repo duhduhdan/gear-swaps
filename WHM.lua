@@ -40,26 +40,32 @@ function init_gear_sets()
     sets.precast.FC = {
         main = gear.FastcastStaff,
         ammo = "Incantor Stone",
+        -- still need to get
         head = "Nahtirah Hat",
         neck = "Orison Locket",
         ear2 = "Loquacious Earring",
-        body = "Vanir Cotehardie",
+        -- still need to get
+        body = "Inyanga Jubbah +2",
+        -- still need to get
         hands = "Gendewitha Gages",
         ring1 = "Prolix Ring",
-        back = "Swith Cape +1",
+        back = "Swith Cape",
         waist = "Witful Belt",
         legs = "Orvail Pants +1",
-        feet = "Chelona Boots +1"
+        -- upgrade to +1 when available
+        feet = "Chelona Boots"
     }
 
     sets.precast.FC['Enhancing Magic'] =
-        set_combine(sets.precast.FC, {waist = "Siegel Sash"})
+        set_combine(sets.precast.FC,
+                    {waist = "Siegel Sash", back = "Mending cape"})
 
     sets.precast.FC.Stoneskin = set_combine(sets.precast.FC['Enhancing Magic'],
                                             {head = "Umuthi Hat"})
 
     sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC, {
-        legs = "Orison Pantaloons +2"
+        -- legs = "Orison Pantaloons +2"
+        legs = "Doyen pants"
     })
 
     sets.precast.FC.StatusRemoval = sets.precast.FC['Healing Magic']
@@ -77,15 +83,15 @@ function init_gear_sets()
     sets.precast.JA.Benediction = {body = "Piety Briault"}
 
     -- Waltz set (chr and vit)
-    sets.precast.Waltz = {
-        head = "Nahtirah Hat",
-        ear1 = "Roundel Earring",
-        body = "Vanir Cotehardie",
-        hands = "Yaoyotl Gloves",
-        back = "Refraction Cape",
-        legs = "Gendewitha Spats",
-        feet = "Gendewitha Galoshes"
-    }
+    -- sets.precast.Waltz = {
+    --     head = "Nahtirah Hat",
+    --     ear1 = "Roundel Earring",
+    --     body = "Vanir Cotehardie",
+    --     hands = "Yaoyotl Gloves",
+    --     back = "Refraction Cape",
+    --     legs = "Gendewitha Spats",
+    --     feet = "Gendewitha Galoshes"
+    -- }
 
     -- Weaponskill sets
 
@@ -107,34 +113,34 @@ function init_gear_sets()
         feet = "Gendewitha Galoshes"
     }
 
-    sets.precast.WS['Flash Nova'] = {
-        head = "Nahtirah Hat",
-        neck = "Stoicheion Medal",
-        ear1 = "Friomisi Earring",
-        ear2 = "Hecate's Earring",
-        body = "Vanir Cotehardie",
-        hands = "Yaoyotl Gloves",
-        ring1 = "Rajas Ring",
-        ring2 = "Strendu Ring",
-        back = "Toro Cape",
-        waist = "Thunder Belt",
-        legs = "Gendewitha Spats",
-        feet = "Gendewitha Galoshes"
-    }
+    -- sets.precast.WS['Flash Nova'] = {
+    --     head = "Nahtirah Hat",
+    --     neck = "Stoicheion Medal",
+    --     ear1 = "Friomisi Earring",
+    --     ear2 = "Hecate's Earring",
+    --     body = "Vanir Cotehardie",
+    --     hands = "Yaoyotl Gloves",
+    --     ring1 = "Rajas Ring",
+    --     ring2 = "Strendu Ring",
+    --     back = "Toro Cape",
+    --     waist = "Thunder Belt",
+    --     legs = "Gendewitha Spats",
+    --     feet = "Gendewitha Galoshes"
+    -- }
 
     -- Midcast Sets
 
-    sets.midcast.FastRecast = {
-        head = "Nahtirah Hat",
-        ear2 = "Loquacious Earring",
-        body = "Vanir Cotehardie",
-        hands = "Dynasty Mitts",
-        ring1 = "Prolix Ring",
-        back = "Swith Cape +1",
-        waist = "Goading Belt",
-        legs = "Gendewitha Spats",
-        feet = "Gendewitha Galoshes"
-    }
+    -- sets.midcast.FastRecast = {
+    --     head = "Nahtirah Hat",
+    --     ear2 = "Loquacious Earring",
+    --     body = "Vanir Cotehardie",
+    --     hands = "Dynasty Mitts",
+    --     ring1 = "Prolix Ring",
+    --     back = "Swith Cape +1",
+    --     waist = "Goading Belt",
+    --     legs = "Gendewitha Spats",
+    --     feet = "Gendewitha Galoshes"
+    -- }
 
     -- Cure sets
     gear.default.obi_waist = "Goading Belt"
@@ -144,17 +150,21 @@ function init_gear_sets()
         main = "Tamaxchi",
         sub = "Genbu's Shield",
         ammo = "Incantor Stone",
+        -- +1 this
         head = "Gendewitha Caubeen",
-        neck = "Orison Locket",
-        ear1 = "Lifestorm Earring",
+        neck = "Cleric's Torque",
+        ear1 = "Mendicant's Earring",
         ear2 = "Orison Earring",
-        body = "Orison Bliaud +2",
+        -- upgrade this
+        body = "Ebers Bliaud",
+        -- upgrade this
         hands = "Theophany Mitts",
-        ring1 = "Prolix Ring",
+        ring1 = "Haoma's ring",
         ring2 = "Sirona's Ring",
-        back = "Tuilha Cape",
+        back = "Mending cape",
         waist = gear.ElementalObi,
-        legs = "Orison Pantaloons +2",
+        legs = "Orison pantaloons +2",
+        -- still need to get
         feet = "Piety Duckbills +1"
     }
 
@@ -162,17 +172,23 @@ function init_gear_sets()
         main = "Tamaxchi",
         sub = "Genbu's Shield",
         ammo = "Incantor Stone",
+        -- +1 this
         head = "Gendewitha Caubeen",
-        neck = "Orison Locket",
-        ear1 = "Lifestorm Earring",
+        neck = "Cleric's Torque",
+        ear1 = "Mendicant's Earring",
         ear2 = "Orison Earring",
-        body = "Vanir Cotehardie",
+        -- still need to get
+        -- body = "Vanir Cotehardie",
+        -- upgrade this
+        body = "Ebers Bliaud",
+        -- upgrade this
         hands = "Theophany Mitts",
-        ring1 = "Prolix Ring",
+        ring1 = "Haoma's ring",
         ring2 = "Sirona's Ring",
-        back = "Tuilha Cape",
+        back = "Mending cape",
         waist = gear.ElementalObi,
-        legs = "Orison Pantaloons +2",
+        legs = "Orison pantaloons +2",
+        -- still need to get
         feet = "Piety Duckbills +1"
     }
 
@@ -181,32 +197,40 @@ function init_gear_sets()
         sub = "Genbu's Shield",
         ammo = "Incantor Stone",
         head = "Gendewitha Caubeen",
-        neck = "Orison Locket",
-        ear1 = "Lifestorm Earring",
+        neck = "Cleric's Torque",
+        ear1 = "Mendicant's Earring",
         ear2 = "Orison Earring",
-        body = "Vanir Cotehardie",
+        -- still need to get
+        -- body = "Vanir Cotehardie",
+        -- upgrade this
+        body = "Ebers Bliaud",
         hands = "Theophany Mitts",
-        ring1 = "Prolix Ring",
+        ring1 = "Haoma's ring",
         ring2 = "Sirona's Ring",
-        back = "Tuilha Cape",
+        back = "Mending cape",
         waist = gear.ElementalObi,
-        legs = "Orison Pantaloons +2",
+        legs = "Orison pantaloons +2",
+        -- still need to get
         feet = "Piety Duckbills +1"
     }
 
     sets.midcast.CureMelee = {
         ammo = "Incantor Stone",
         head = "Gendewitha Caubeen",
-        neck = "Orison Locket",
-        ear1 = "Lifestorm Earring",
+        neck = "Cleric's Torque",
+        ear1 = "Mendicant's Earring",
         ear2 = "Orison Earring",
-        body = "Vanir Cotehardie",
-        hands = "Bokwus Gloves",
-        ring1 = "Prolix Ring",
+        -- still need to get
+        -- body = "Vanir Cotehardie",
+        -- upgrade this
+        body = "Ebers Bliaud",
+        hands = "Theophany Mitts",
+        ring1 = "Haoma's ring",
         ring2 = "Sirona's Ring",
-        back = "Tuilha Cape",
+        back = "Mending cape",
         waist = gear.ElementalObi,
-        legs = "Orison Pantaloons +2",
+        legs = "Orison pantaloons +2",
+        -- still need to get
         feet = "Piety Duckbills +1"
     }
 
@@ -215,13 +239,15 @@ function init_gear_sets()
         sub = "Genbu's Shield",
         head = "Orison Cap +2",
         neck = "Malison Medallion",
-        body = "Orison Bliaud +2",
+        -- upgrade this
+        body = "Ebers Bliaud",
         hands = "Hieros Mittens",
-        ring1 = "Ephedra Ring",
+        ring1 = "Haoma's Ring",
         ring2 = "Sirona's Ring",
         back = "Mending Cape",
-        waist = "Goading Belt",
+        waist = "Witful Belt",
         legs = "Theophany Pantaloons",
+        -- still need to get
         feet = "Gendewitha Galoshes"
     }
 
@@ -371,75 +397,120 @@ function init_gear_sets()
 
     -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
     sets.idle = {
-        main = "Bolelabunga",
+        main = "Tamaxchi",
         sub = "Genbu's Shield",
         ammo = "Incantor Stone",
         head = "Nahtirah Hat",
-        neck = "Wiglen Gorget",
+        neck = "Cleric's Torque",
         ear1 = "Bloodgem Earring",
         ear2 = "Loquacious Earring",
-        body = "Gendewitha Bliaut",
+        body = "Ebers bliaud",
         hands = "Serpentes Cuffs",
-        ring1 = "Sheltered Ring",
-        ring2 = "Paguroidea Ring",
-        back = "Umbra Cape",
+        ring1 = "Stikini Ring",
+        ring2 = "Stikini Ring",
+        back = "Mending Cape",
         waist = "Witful Belt",
         legs = "Nares Trews",
-        feet = "Herald's Gaiters"
+        feet = "Serpentes Sabots"
     }
 
     sets.idle.PDT = {
-        main = "Bolelabunga",
+        main = "Tamaxchi",
         sub = "Genbu's Shield",
         ammo = "Incantor Stone",
         head = "Nahtirah Hat",
-        neck = "Twilight Torque",
+        neck = "Cleric's Torque",
         ear1 = "Bloodgem Earring",
         ear2 = "Loquacious Earring",
-        body = "Gendewitha Bliaut",
-        hands = "Gendewitha Gages",
-        ring1 = "Defending Ring",
-        ring2 = gear.DarkRing.physical,
-        back = "Umbra Cape",
+        body = "Ebers bliaud",
+        hands = "Serpentes Cuffs",
+        ring1 = "Stikini Ring",
+        ring2 = "Stikini Ring",
+        back = "Mending Cape",
         waist = "Witful Belt",
-        legs = "Gendewitha Spats",
+        legs = "Nares Trews",
         feet = "Herald's Gaiters"
+        -- main = "Bolelabunga",
+        -- sub = "Genbu's Shield",
+        -- ammo = "Incantor Stone",
+        -- head = "Nahtirah Hat",
+        -- neck = "Twilight Torque",
+        -- ear1 = "Bloodgem Earring",
+        -- ear2 = "Loquacious Earring",
+        -- body = "Gendewitha Bliaut",
+        -- hands = "Gendewitha Gages",
+        -- ring1 = "Defending Ring",
+        -- ring2 = gear.DarkRing.physical,
+        -- back = "Umbra Cape",
+        -- waist = "Witful Belt",
+        -- legs = "Gendewitha Spats",
+        -- feet = "Herald's Gaiters"
     }
 
     sets.idle.Town = {
-        main = "Bolelabunga",
+        main = "Tamaxchi",
         sub = "Genbu's Shield",
         ammo = "Incantor Stone",
-        head = "Gendewitha Caubeen",
-        neck = "Wiglen Gorget",
+        head = "Nahtirah Hat",
+        neck = "Cleric's Torque",
         ear1 = "Bloodgem Earring",
         ear2 = "Loquacious Earring",
-        body = "Gendewitha Bliaut",
-        hands = "Gendewitha Gages",
-        ring1 = "Sheltered Ring",
-        ring2 = "Paguroidea Ring",
-        back = "Umbra Cape",
+        body = "Ebers bliaud",
+        hands = "Serpentes Cuffs",
+        ring1 = "Stikini Ring",
+        ring2 = "Stikini Ring",
+        back = "Mending Cape",
         waist = "Witful Belt",
         legs = "Nares Trews",
         feet = "Herald's Gaiters"
+        -- main = "Bolelabunga",
+        -- sub = "Genbu's Shield",
+        -- ammo = "Incantor Stone",
+        -- head = "Gendewitha Caubeen",
+        -- neck = "Wiglen Gorget",
+        -- ear1 = "Bloodgem Earring",
+        -- ear2 = "Loquacious Earring",
+        -- body = "Gendewitha Bliaut",
+        -- hands = "Gendewitha Gages",
+        -- ring1 = "Sheltered Ring",
+        -- ring2 = "Paguroidea Ring",
+        -- back = "Umbra Cape",
+        -- waist = "Witful Belt",
+        -- legs = "Nares Trews",
+        -- feet = "Herald's Gaiters"
     }
 
     sets.idle.Weak = {
-        main = "Bolelabunga",
+        main = "Tamaxchi",
         sub = "Genbu's Shield",
         ammo = "Incantor Stone",
         head = "Nahtirah Hat",
         neck = "Twilight Torque",
         ear1 = "Bloodgem Earring",
         ear2 = "Loquacious Earring",
-        body = "Gendewitha Bliaut",
-        hands = "Yaoyotl Gloves",
-        ring1 = "Defending Ring",
-        ring2 = "Meridian Ring",
-        back = "Umbra Cape",
+        body = "Ebers bliaud",
+        hands = "Serpentes Cuffs",
+        ring1 = "Stikini Ring",
+        ring2 = "Stikini Ring",
+        back = "Iximulew Cape",
         waist = "Witful Belt",
         legs = "Nares Trews",
-        feet = "Gendewitha Galoshes"
+        feet = "Herald's Gaiters"
+        -- main = "Bolelabunga",
+        -- sub = "Genbu's Shield",
+        -- ammo = "Incantor Stone",
+        -- head = "Nahtirah Hat",
+        -- neck = "Twilight Torque",
+        -- ear1 = "Bloodgem Earring",
+        -- ear2 = "Loquacious Earring",
+        -- body = "Gendewitha Bliaut",
+        -- hands = "Yaoyotl Gloves",
+        -- ring1 = "Defending Ring",
+        -- ring2 = "Meridian Ring",
+        -- back = "Umbra Cape",
+        -- waist = "Witful Belt",
+        -- legs = "Nares Trews",
+        -- feet = "Gendewitha Galoshes"
     }
 
     -- Defense sets
@@ -610,6 +681,6 @@ end
 -- Select default macro book on initial load or subjob change.
 function select_default_macro_book()
     -- Default macro set/book
-    set_macro_page(4, 14)
+    set_macro_page(3, 1)
 end
 
